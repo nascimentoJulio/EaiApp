@@ -3,6 +3,7 @@ package br.com.panteratech.eaiapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -26,7 +27,10 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Column {
+        Text(text = "Hello $name with h1 bold", style = MaterialTheme.typography.h1)
+        Text(text = "Hello $name with body regular", style = MaterialTheme.typography.body1)
+    }
 }
 
 @Preview(showBackground = true)
