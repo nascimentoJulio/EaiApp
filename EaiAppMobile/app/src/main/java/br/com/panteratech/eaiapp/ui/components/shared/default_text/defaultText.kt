@@ -9,7 +9,7 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun DefaultText(
-    text: String = "Hello, World!",
+    text: String,
     color: Color = MaterialTheme.colors.onSurface,
     fontSize: Float = 14f
 ) {

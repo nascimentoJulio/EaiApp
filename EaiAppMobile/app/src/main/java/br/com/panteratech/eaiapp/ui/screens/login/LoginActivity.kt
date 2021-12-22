@@ -71,28 +71,28 @@ fun FormContainer() {
         Spacer(modifier = Modifier.padding(top = 60.dp))
 
         InputDefault(
-            label = "Email",
-            placeholder = "Informe seu email!"
+            label = stringResource(id = R.string.email),
+            placeholder = stringResource(id = R.string.inform_your_email)
         )
 
         Spacer(modifier = Modifier.padding(top = 45.dp))
 
         InputDefault(
-            label = "Senha",
-            placeholder = "Informe seu email!"
+            label = stringResource(id = R.string.password),
+            placeholder = stringResource(id = R.string.inform_your_password)
         )
 
         Spacer(modifier = Modifier.padding(top = 10.dp))
         Row {
             DefaultText(
-                text = "Não tem uma conta?",
+                text = stringResource(id = R.string.dont_have_an_account),
                 color = Color.Black
             )
             Spacer(modifier = Modifier.padding(horizontal = 4.dp))
             ClickableText(
                 onClick = {
                 },
-                text = AnnotatedString(text = "Crie aqui!"),
+                text = AnnotatedString(text = stringResource(id = R.string.create_here)),
                 style = TextStyle(
                     color = MaterialTheme.colors.primary,
                     fontFamily = MaterialTheme.typography.body1.fontFamily
@@ -101,6 +101,6 @@ fun FormContainer() {
         }
         Spacer(modifier = Modifier.padding(top = 150.dp))
 
-        ButtonDefault(text = "ENTRAR", onClick = null)
+        ButtonDefault(text = stringResource(id = R.string.login), onClick = null)
     }
 }
