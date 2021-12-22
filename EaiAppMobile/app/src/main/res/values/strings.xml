@@ -8,4 +8,5 @@
     <string name="dont_have_an_account">Ainda não tem uma conta?</string>
     <string name="create_here">Crie aqui!</string>
     <string name="login">ENTRAR</string>
+    <string name="show_password">Mostrar Senha</string>
 </resources>

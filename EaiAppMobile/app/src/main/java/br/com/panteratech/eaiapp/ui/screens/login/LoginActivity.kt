@@ -5,16 +5,17 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.panteratech.eaiapp.R
@@ -64,6 +65,9 @@ fun LoginContainer() {
 
 @Composable
 fun FormContainer() {
+    var passwordType by remember { mutableStateOf(PasswordVisualTransformation()) }
+    var isShowPassword by remember { mutableStateOf(false) }
+
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxWidth()
@@ -79,7 +83,28 @@ fun FormContainer() {
 
         InputDefault(
             label = stringResource(id = R.string.password),
-            placeholder = stringResource(id = R.string.inform_your_password)
+            placeholder = stringResource(id = R.string.inform_your_password),
+            visualTransformation = if (isShowPassword) VisualTransformation.None else PasswordVisualTransformation(),
+            trailingIcon = {
+                IconButton(
+                    onClick =
+                    {
+                        isShowPassword = !isShowPassword
+                    }) {
+                    when(isShowPassword){
+                        false ->  Icon(
+                            painter = painterResource(id = R.drawable.ic_show_password),
+                            contentDescription = stringResource(id = R.string.show_password),
+                            tint = Color.Black
+                        )
+                        true ->  Icon(
+                            painter = painterResource(id = R.drawable.ic_visibility_off),
+                            contentDescription = stringResource(id = R.string.show_password),
+                            tint = Color.Black
+                        )
+                    }
+                }
+            }
         )
 
         Spacer(modifier = Modifier.padding(top = 10.dp))

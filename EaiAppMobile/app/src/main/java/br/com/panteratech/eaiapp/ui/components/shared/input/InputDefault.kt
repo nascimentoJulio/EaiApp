@@ -8,6 +8,8 @@ import androidx.compose.material.TextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -15,6 +17,8 @@ fun InputDefault(
     focusedBorderColor: Color = MaterialTheme.colors.onBackground,
     unfocusedBorderColor: Color = MaterialTheme.colors.secondary,
     placeholder: String,
+    trailingIcon: @Composable (() -> Unit)? = null,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
     label: String
 ) {
     var text by remember { mutableStateOf("") }
@@ -25,6 +29,8 @@ fun InputDefault(
         placeholder = { Text(text = placeholder) },
         label = { Text(label) },
         onValueChange = { newText -> text = newText },
+        trailingIcon = trailingIcon,
+        visualTransformation = visualTransformation,
         colors = TextFieldDefaults.outlinedTextFieldColors(
             focusedBorderColor = focusedBorderColor,
             unfocusedBorderColor = unfocusedBorderColor,
