@@ -1,4 +1,4 @@
-package br.com.panteratech.eaiapp
+package br.com.panteratech.eaiapp.ui.screens.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
