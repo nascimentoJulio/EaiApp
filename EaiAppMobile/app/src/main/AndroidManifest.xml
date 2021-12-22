@@ -12,9 +12,7 @@
         <activity
             android:name=".ui.screens.login.LoginActivity"
             android:exported="true"
-            android:label="@string/title_activity_login"
             android:theme="@style/Theme.EaiApp.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -19,7 +19,7 @@ private val colorsPallet = Colors(
     error =  Color.Red,
     isLight = true,
     onError = Color.Red,
-    secondaryVariant = Color.Red
+    secondaryVariant = PlaceHolderColor
 
 )
 

@@ -4,15 +4,22 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.*
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import br.com.panteratech.eaiapp.R
 import br.com.panteratech.eaiapp.ui.components.shared.button.ButtonDefault
+import br.com.panteratech.eaiapp.ui.components.shared.default_text.DefaultText
 import br.com.panteratech.eaiapp.ui.components.shared.input.InputDefault
 import br.com.panteratech.eaiapp.ui.theme.EaiAppTheme
 
@@ -43,17 +50,57 @@ fun Greeting() {
 }
 
 @Composable
-fun LoginContainer(){
-    Column (
+fun LoginContainer() {
+    Column(
         Modifier
             .fillMaxWidth()
             .fillMaxHeight()
             .padding(horizontal = 30.dp, vertical = 50.dp)
-            ){
+    ) {
         Greeting()
-        InputDefault(label = "Email")
-        InputDefault(label = "Senha")
-        ButtonDefault(text = "ENTRAR", onClick = null)
+        FormContainer()
     }
 }
 
+@Composable
+fun FormContainer() {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Spacer(modifier = Modifier.padding(top = 60.dp))
+
+        InputDefault(
+            label = "Email",
+            placeholder = "Informe seu email!"
+        )
+
+        Spacer(modifier = Modifier.padding(top = 45.dp))
+
+        InputDefault(
+            label = "Senha",
+            placeholder = "Informe seu email!"
+        )
+
+        Spacer(modifier = Modifier.padding(top = 10.dp))
+        Row {
+            DefaultText(
+                text = "Não tem uma conta?",
+                color = Color.Black
+            )
+            Spacer(modifier = Modifier.padding(horizontal = 4.dp))
+            ClickableText(
+                onClick = {
+                },
+                text = AnnotatedString(text = "Crie aqui!"),
+                style = TextStyle(
+                    color = MaterialTheme.colors.primary,
+                    fontFamily = MaterialTheme.typography.body1.fontFamily
+                )
+            )
+        }
+        Spacer(modifier = Modifier.padding(top = 150.dp))
+
+        ButtonDefault(text = "ENTRAR", onClick = null)
+    }
+}

@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">EaiApp</string>
-    <string name="title_activity_login">LoginActivity</string>
     <string name="login_greeting">Esse é o Eai, seu app de conversa. Faça amigos e e se divirta muito.</string>
 </resources>
