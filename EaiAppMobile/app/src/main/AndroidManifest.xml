@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EaiApp">
         <activity
+            android:name=".ui.screens.register.RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_register"
+            android:theme="@style/Theme.EaiApp.NoActionBar" />
+        <activity
             android:name=".ui.screens.login.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.EaiApp.NoActionBar">
@@ -19,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.screens.main.MainActivity"
             android:exported="false"

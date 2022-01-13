@@ -1,47 +1,39 @@
-package br.com.panteratech.eaiapp.ui.screens.login
+package br.com.panteratech.eaiapp.ui.screens.register
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
+import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import br.com.panteratech.eaiapp.R
 import br.com.panteratech.eaiapp.ui.components.shared.button.ButtonDefault
+import br.com.panteratech.eaiapp.ui.components.shared.checkbox.CheckboxDefault
 import br.com.panteratech.eaiapp.ui.components.shared.container.Container
 import br.com.panteratech.eaiapp.ui.components.shared.default_text.DefaultText
 import br.com.panteratech.eaiapp.ui.components.shared.greetings.Greeting
 import br.com.panteratech.eaiapp.ui.components.shared.input.InputDefault
 import br.com.panteratech.eaiapp.ui.theme.EaiAppTheme
-import br.com.panteratech.eaiapp.ui.utils.NavConfig
 
-class LoginActivity() : ComponentActivity() {
-
-
+class RegisterActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
             EaiAppTheme {
-                Surface(color = MaterialTheme.colors.background) {
-                    NavConfig()
-                }
+                Surface(
+                    color = MaterialTheme.colors.background,
+                    content = {
+                        RegisterScreen()
+                    })
             }
         }
     }
@@ -49,17 +41,20 @@ class LoginActivity() : ComponentActivity() {
 
 
 @Composable
-fun LoginContainer(navController: NavHostController) {
-   Container {
-       Column{
-           Greeting(stringResource(id = R.string.login_greeting))
-           FormContainer(navController)
-       }
-   }
+fun RegisterScreen() {
+    Container {
+        Column(
+            modifier = Modifier
+                .background(MaterialTheme.colors.background)
+        ) {
+            Greeting(stringResource(id = R.string.register_greeting))
+            FormContainer()
+        }
+    }
 }
 
 @Composable
-private fun FormContainer(navController: NavHostController) {
+private fun FormContainer() {
     var isShowPassword by remember { mutableStateOf(false) }
 
     Column(
@@ -67,6 +62,13 @@ private fun FormContainer(navController: NavHostController) {
         modifier = Modifier.fillMaxWidth()
     ) {
         Spacer(modifier = Modifier.padding(top = 60.dp))
+
+        InputDefault(
+            label = stringResource(id = R.string.name),
+            placeholder = stringResource(id = R.string.inform_your_name)
+        )
+
+        Spacer(modifier = Modifier.padding(top = 45.dp))
 
         InputDefault(
             label = stringResource(id = R.string.email),
@@ -101,26 +103,11 @@ private fun FormContainer(navController: NavHostController) {
             }
         )
 
-        Spacer(modifier = Modifier.padding(top = 10.dp))
-        Row {
-            DefaultText(
-                text = stringResource(id = R.string.dont_have_an_account),
-                color = Color.Black
-            )
-            Spacer(modifier = Modifier.padding(horizontal = 4.dp))
-            ClickableText(
-                onClick = {
-                    navController.navigate("register")
-                },
-                text = AnnotatedString(text = stringResource(id = R.string.create_here)),
-                style = TextStyle(
-                    color = MaterialTheme.colors.primary,
-                    fontFamily = MaterialTheme.typography.body1.fontFamily
-                )
-            )
-        }
+        CheckboxDefault()
+
+
         Spacer(modifier = Modifier.padding(top = 150.dp))
 
-        ButtonDefault(text = stringResource(id = R.string.login), onClick = null)
+        ButtonDefault(text = stringResource(id = R.string.register), onClick = null)
     }
 }

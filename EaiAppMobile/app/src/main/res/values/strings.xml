@@ -9,4 +9,11 @@
     <string name="create_here">Crie aqui!</string>
     <string name="login">ENTRAR</string>
     <string name="show_password">Mostrar Senha</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="register_greeting">Seja bem vindo, faça seu cadastro e comece a fazer inumeras amizades.</string>
+    <string name="inform_your_name">Informe Seu Nome</string>
+    <string name="name">Nome</string>
+    <string name="register">Registrar</string>
+    <string name="take_picture">Tirar foto</string>
+    <string name="accept_terms">Aceito os termos de uso e politicas de privacidade</string>
 </resources>
