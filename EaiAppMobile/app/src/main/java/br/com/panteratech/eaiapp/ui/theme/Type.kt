@@ -2,27 +2,32 @@ package br.com.panteratech.eaiapp.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import br.com.panteratech.eaiapp.R
 
-// Set of Material typography styles to start with
+val Ruda = FontFamily(
+    Font(R.font.ruda_bold),
+    Font(R.font.ruda_regular, FontWeight.Bold),
+)
+
 val Typography = Typography(
+    h1 = TextStyle(
+        fontFamily = Ruda,
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold
+    ),
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = Ruda,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
-    )
-    /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
-        fontSize = 14.sp
     ),
-    caption = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+    button = TextStyle(
+        fontFamily = Ruda,
+        fontWeight = FontWeight.Bold,
+        fontSize = 18.sp
     )
-    */
+
 )

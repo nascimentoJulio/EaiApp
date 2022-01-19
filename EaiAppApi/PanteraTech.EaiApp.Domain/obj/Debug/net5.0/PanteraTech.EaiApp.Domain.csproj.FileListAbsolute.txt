@@ -1,0 +1,14 @@
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\bin\Debug\net5.0\PanteraTech.EaiApp.Domain.deps.json
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\bin\Debug\net5.0\PanteraTech.EaiApp.Domain.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\bin\Debug\net5.0\ref\PanteraTech.EaiApp.Domain.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\bin\Debug\net5.0\PanteraTech.EaiApp.Domain.pdb
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\PanteraTech.EaiApp.Domain.csproj.AssemblyReference.cache
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\PanteraTech.EaiApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\PanteraTech.EaiApp.Domain.AssemblyInfoInputs.cache
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\PanteraTech.EaiApp.Domain.AssemblyInfo.cs
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\PanteraTech.EaiApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\PanteraTech.EaiApp.Domain.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\ref\PanteraTech.EaiApp.Domain.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\obj\Debug\net5.0\PanteraTech.EaiApp.Domain.pdb
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\bin\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Domain\bin\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.pdb

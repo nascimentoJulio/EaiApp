@@ -5,7 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PanteraTech.EaiApp.Infrastructure.Auth\PanteraTech.EaiApp.Infrastructure.Auth.csproj" />
+    <ProjectReference Include="..\PanteraTech.EaiApp.Infraestructure.Data\PanteraTech.EaiApp.Infraestructure.Data.csproj" />
+    <ProjectReference Include="..\PanteraTech.EaiApp.Domain\PanteraTech.EaiApp.Domain.csproj" />
   </ItemGroup>
 
 </Project>
