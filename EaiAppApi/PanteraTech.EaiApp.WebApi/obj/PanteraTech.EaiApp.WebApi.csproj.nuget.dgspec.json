@@ -4,14 +4,150 @@
     "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj": {
+    "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj",
-        "projectName": "PanteraTech.EaiApp.WebApi",
-        "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj",
+        "projectName": "PanteraTech.EaiApp.Domain",
+        "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj",
         "packagesPath": "C:\\Users\\Julio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj": {
+                "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\PanteraTech.EaiApp.Infraestructure.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\PanteraTech.EaiApp.Infraestructure.Data.csproj",
+        "projectName": "PanteraTech.EaiApp.Infraestructure.Data",
+        "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\PanteraTech.EaiApp.Infraestructure.Data.csproj",
+        "packagesPath": "C:\\Users\\Julio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj",
+        "projectName": "PanteraTech.EaiApp.Infrastructure.Auth",
+        "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj",
+        "packagesPath": "C:\\Users\\Julio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -40,6 +176,96 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj",
+        "projectName": "PanteraTech.EaiApp.WebApi",
+        "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj",
+        "packagesPath": "C:\\Users\\Julio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
+          "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj": {
+                "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj"
+              },
+              "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\PanteraTech.EaiApp.Infraestructure.Data.csproj": {
+                "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\PanteraTech.EaiApp.Infraestructure.Data.csproj"
+              },
+              "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj": {
+                "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"

@@ -1,0 +1,12 @@
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\bin\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.deps.json
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\bin\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\bin\Debug\net5.0\ref\PanteraTech.EaiApp.Infrastructure.Auth.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\bin\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.pdb
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.csproj.AssemblyReference.cache
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.AssemblyInfoInputs.cache
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.AssemblyInfo.cs
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.csproj.CoreCompileInputs.cache
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\ref\PanteraTech.EaiApp.Infrastructure.Auth.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infrastructure.Auth\obj\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.pdb
