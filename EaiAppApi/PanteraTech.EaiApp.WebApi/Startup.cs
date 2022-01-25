@@ -16,6 +16,7 @@ using PanteraTech.EaiApp.Infrastructure.Auth.Service;
 using PanteraTech.EaiApp.Domain.Repository;
 using PanteraTech.EaiApp.Domain.User.Register;
 using PanteraTech.EaiApp.Infraestructure.Data.Config;
+using PanteraTech.EaiApp.Infraestructure.Data.Chats;
 
 namespace PanteraTech.EaiApp.WebApi
 {
@@ -65,6 +66,7 @@ namespace PanteraTech.EaiApp.WebApi
 
       services.AddScoped<ITokenService, TokenService>();
       services.AddScoped<IUserRepository, UserRepository>();
+      services.AddScoped<IChatsRepository, ChatsRepository>();
    //   services.AddSingleton(postgreSqlConfiguration);
     }
 

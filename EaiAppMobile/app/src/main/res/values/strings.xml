@@ -16,4 +16,7 @@
     <string name="register">Registrar</string>
     <string name="take_picture">Tirar foto</string>
     <string name="accept_terms">Aceito os termos de uso e politicas de privacidade</string>
+    <string name="access_token">access_token</string>
+    <string name="error_api">Ocorreu um erro interno. Tente novamente mais tarde</string>
+    <string name="succes_register">Conta criada com sucesso! Aproveite o app :)</string>
 </resources>
