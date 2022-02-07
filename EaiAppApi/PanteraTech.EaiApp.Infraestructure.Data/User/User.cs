@@ -7,6 +7,9 @@ namespace PanteraTech.EaiApp.Infraestructure.Data.User
     public string Email { get; set; }
 
     public string PasswordUser { get; set; }
+
     public string Username { get; set; }
+
+    public string Url_Profile_User { get; set; }
   }
 }

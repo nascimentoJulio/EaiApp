@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "474708617039",
+    "project_id": "eai-app-b9880",
+    "storage_bucket": "eai-app-b9880.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474708617039:android:92000a8c4ae37cdd4f873a",
+        "android_client_info": {
+          "package_name": "br.com.panteratech.eaiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474708617039-rke4ptvtler9dm49pb9g8uueeot2pub2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.panteratech.eaiapp",
+            "certificate_hash": "14572909c53ae9a2210523e47b55f238b64bba7b"
+          }
+        },
+        {
+          "client_id": "474708617039-pie3qvdiepea1h9l9aksn9aunqbdsccb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuREeoA1mhi18Umj7k3KXFoe1kniepHWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474708617039-pie3qvdiepea1h9l9aksn9aunqbdsccb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

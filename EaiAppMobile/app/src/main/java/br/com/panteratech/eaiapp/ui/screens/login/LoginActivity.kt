@@ -20,9 +20,10 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import br.com.panteratech.eaiapp.R
+import br.com.panteratech.eaiapp.model.LoginModel
 import br.com.panteratech.eaiapp.ui.components.shared.button.ButtonDefault
 import br.com.panteratech.eaiapp.ui.components.shared.container.Container
 import br.com.panteratech.eaiapp.ui.components.shared.default_text.DefaultText
@@ -30,7 +31,9 @@ import br.com.panteratech.eaiapp.ui.components.shared.greetings.Greeting
 import br.com.panteratech.eaiapp.ui.components.shared.input.InputDefault
 import br.com.panteratech.eaiapp.ui.theme.EaiAppTheme
 import br.com.panteratech.eaiapp.ui.utils.NavConfig
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginActivity() : ComponentActivity() {
 
 
@@ -61,6 +64,8 @@ fun LoginContainer(navController: NavHostController) {
 @Composable
 private fun FormContainer(navController: NavHostController) {
     var isShowPassword by remember { mutableStateOf(false) }
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -70,13 +75,15 @@ private fun FormContainer(navController: NavHostController) {
 
         InputDefault(
             label = stringResource(id = R.string.email),
-            placeholder = stringResource(id = R.string.inform_your_email)
+            placeholder = stringResource(id = R.string.inform_your_email),
+            onChange = { email = it}
         )
 
         Spacer(modifier = Modifier.padding(top = 45.dp))
 
         InputDefault(
             label = stringResource(id = R.string.password),
+            onChange = { password = it},
             placeholder = stringResource(id = R.string.inform_your_password),
             visualTransformation = if (isShowPassword) VisualTransformation.None else PasswordVisualTransformation(),
             trailingIcon = {
@@ -121,6 +128,14 @@ private fun FormContainer(navController: NavHostController) {
         }
         Spacer(modifier = Modifier.padding(top = 150.dp))
 
-        ButtonDefault(text = stringResource(id = R.string.login), onClick = null)
+        val viewModel = hiltViewModel<LoginViewModel>()
+
+
+        ButtonDefault(text = stringResource(id = R.string.login), onClick = {
+            val success = viewModel.login(
+                LoginModel(email, password)
+            )
+            navController.navigate("home")
+        })
     }
 }
