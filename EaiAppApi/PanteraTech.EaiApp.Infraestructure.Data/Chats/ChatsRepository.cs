@@ -38,6 +38,7 @@ namespace PanteraTech.EaiApp.Infraestructure.Data.Chats
         {
           Id = c.Id,
           UsernameFriend = c.Username,
+          FriendProfileUrl = c.Url_Profile_User,
           HourLastMessage = c.Hour_Last_Message,
           LastMessage = c.Last_Message,
           QuantityNoreadMessages = c.Quantity_Noread_Messages

@@ -6,6 +6,7 @@ namespace PanteraTech.EaiApp.Domain.Chats.GetChats
 
     public string UsernameFriend { get; set; }
 
+    public string FriendProfileUrl { get; set;}
     public string LastMessage { get; set; }
 
     public string HourLastMessage { get; set; }

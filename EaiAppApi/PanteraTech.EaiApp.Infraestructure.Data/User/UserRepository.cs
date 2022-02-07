@@ -31,12 +31,13 @@ namespace PanteraTech.EaiApp.Infraestructure.Data.User
     {
       using (var db = new NpgsqlConnection("Server=ec2-34-232-149-136.compute-1.amazonaws.com;Port=5432;Database=d8gn66uir43dod;User Id=idgwbyrgklmalo;Password=1084bab71f92c9fae6709d8ad0eb2c7d32f287fa849e2b16392a39e8a7e8f2c8;Ssl Mode=Require;Trust Server Certificate=true;"))
       {
-        var query = @"INSERT INTO userapp (email, passwordUser, username) VALUES(@Email, @Password, @Username)";
+        var query = @"INSERT INTO userapp (email, passwordUser, username, url_profile_user) VALUES(@Email, @Password, @Username, @UrlProfileUser)";
         var id = await db.ExecuteAsync(query, new
         {
           Email = user.Email,
           Password = user.Password,
-          Username = user.Username
+          Username = user.Username,
+          UrlProfileUser = user.UrlProfileUser
         });
         db.Close();
 
@@ -57,7 +58,8 @@ namespace PanteraTech.EaiApp.Infraestructure.Data.User
         {
           Email = user.AsList().First().Email,
           Password = user.AsList().First().PasswordUser,
-          Username = user.AsList().First().Username
+          Username = user.AsList().First().Username,
+          UrlProfileUser = user.AsList().First().Url_Profile_User
         };
       }
     }
