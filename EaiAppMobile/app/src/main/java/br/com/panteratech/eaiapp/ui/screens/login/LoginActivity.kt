@@ -1,18 +1,25 @@
 package br.com.panteratech.eaiapp.ui.screens.login
 
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
+import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
@@ -34,7 +41,7 @@ import br.com.panteratech.eaiapp.ui.utils.NavConfig
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class LoginActivity() : ComponentActivity() {
+class LoginActivity : ComponentActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,12 +60,12 @@ class LoginActivity() : ComponentActivity() {
 
 @Composable
 fun LoginContainer(navController: NavHostController) {
-   Container {
-       Column{
-           Greeting(stringResource(id = R.string.login_greeting))
-           FormContainer(navController)
-       }
-   }
+    Container {
+        Column {
+            Greeting(stringResource(id = R.string.login_greeting))
+            FormContainer(navController)
+        }
+    }
 }
 
 @Composable
@@ -66,7 +73,6 @@ private fun FormContainer(navController: NavHostController) {
     var isShowPassword by remember { mutableStateOf(false) }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
-
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxWidth()
@@ -76,14 +82,14 @@ private fun FormContainer(navController: NavHostController) {
         InputDefault(
             label = stringResource(id = R.string.email),
             placeholder = stringResource(id = R.string.inform_your_email),
-            onChange = { email = it}
+            onChange = { email = it }
         )
 
         Spacer(modifier = Modifier.padding(top = 45.dp))
 
         InputDefault(
             label = stringResource(id = R.string.password),
-            onChange = { password = it},
+            onChange = { password = it },
             placeholder = stringResource(id = R.string.inform_your_password),
             visualTransformation = if (isShowPassword) VisualTransformation.None else PasswordVisualTransformation(),
             trailingIcon = {

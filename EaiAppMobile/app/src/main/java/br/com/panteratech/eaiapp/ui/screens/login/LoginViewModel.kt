@@ -33,6 +33,10 @@ class LoginViewModel @Inject constructor(
                 Toast.makeText(context, t, Toast.LENGTH_SHORT).show()
             }
 
+            override fun onSuccess(t: List<LoginResponse>){
+                TODO("Not yet implemented")
+            }
+
         }
         return api.login(loginModel, apiListener)
     }
