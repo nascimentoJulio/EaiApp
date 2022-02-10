@@ -20,7 +20,6 @@ namespace PanteraTech.EaiApp.Domain.Chats.GetChats
     public async Task<List<GetChatsCommandResult>> Handle(GetChatsCommand request, CancellationToken cancellationToken)
     {
       var result = await _repository.GetChats(request.EmailUser);
-      throw new HttpException(HttpStatusCode.UnprocessableEntity, "Erro Regra de negocio", "Erro que é um sucesso");
       return result;
     }
   }
