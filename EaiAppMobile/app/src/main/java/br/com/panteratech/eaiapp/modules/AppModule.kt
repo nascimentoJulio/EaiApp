@@ -1,6 +1,7 @@
 package br.com.panteratech.eaiapp.modules
 
 import android.content.Context
+import br.com.panteratech.eaiapp.repository.remote.api.ChatRepository
 import br.com.panteratech.eaiapp.repository.remote.api.EaiApi
 import br.com.panteratech.eaiapp.repository.remote.api.UserRepository
 import dagger.Module
@@ -10,8 +11,6 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Inject
-import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -30,12 +29,22 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun createRepository(
+    fun createRepositoryUser(
          eaiApi: EaiApi,
          @ApplicationContext context: Context
     ) : UserRepository{
         return UserRepository(eaiApi, context)
     }
+
+    @Singleton
+    @Provides
+    fun createRepositoryChat(
+        eaiApi: EaiApi,
+        @ApplicationContext context: Context
+    ) : ChatRepository{
+        return ChatRepository(eaiApi, context)
+    }
+
 
 
 

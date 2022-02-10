@@ -17,6 +17,7 @@ using PanteraTech.EaiApp.Domain.Repository;
 using PanteraTech.EaiApp.Domain.User.Register;
 using PanteraTech.EaiApp.Infraestructure.Data.Config;
 using PanteraTech.EaiApp.Infraestructure.Data.Chats;
+using PanteraTech.EaiApp.WebApi.Extensions;
 
 namespace PanteraTech.EaiApp.WebApi
 {
@@ -67,7 +68,7 @@ namespace PanteraTech.EaiApp.WebApi
       services.AddScoped<ITokenService, TokenService>();
       services.AddScoped<IUserRepository, UserRepository>();
       services.AddScoped<IChatsRepository, ChatsRepository>();
-   //   services.AddSingleton(postgreSqlConfiguration);
+      //   services.AddSingleton(postgreSqlConfiguration);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -80,10 +81,13 @@ namespace PanteraTech.EaiApp.WebApi
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PanteraTech.EaiApp.WebApi v1"));
       }
 
+      app.UseMyErrorHandler();
+
       app.UseCors();
       app.UseHttpsRedirection();
 
       app.UseRouting();
+
 
       app.UseAuthentication();
 

@@ -53,14 +53,17 @@ namespace PanteraTech.EaiApp.Infraestructure.Data.User
         var query = @"Select * from userapp Where email = @Email";
         var user = await db.QueryAsync<User>(query, new { Email = email });
         db.Close();
-
-        return new RegisterUserCommand
+        if (user.ToList().Count > 0)
         {
-          Email = user.AsList().First().Email,
-          Password = user.AsList().First().PasswordUser,
-          Username = user.AsList().First().Username,
-          UrlProfileUser = user.AsList().First().Url_Profile_User
-        };
+          return new RegisterUserCommand
+          {
+            Email = user.AsList().First().Email,
+            Password = user.AsList().First().PasswordUser,
+            Username = user.AsList().First().Username,
+            UrlProfileUser = user.AsList().First().Url_Profile_User
+          };
+        }
+        return null;
       }
     }
   }
