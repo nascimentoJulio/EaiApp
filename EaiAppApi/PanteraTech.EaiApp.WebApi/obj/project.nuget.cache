@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ulYLCrCUe3oIKwsXpAj4Q62Kk3daqzV0yhnkbUK+eIAeK+zwOkm4UAmN6K/zrc6mN6VIMOF4mtoBuuF6sZHEpg==",
+  "dgSpecHash": "IrR+dVh9b7eL2E0FQXrpntWIzVo+GkhT6D90ffOz/CgGIEZ0z43LWmpYZUHv2A1exyTGVowfpTtqrpEWn2LZ+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\PanteraTech.EaiApp.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Julio\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\Julio\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
@@ -42,6 +43,7 @@
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\Julio\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\npgsql\\5.0.7\\npgsql.5.0.7.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",

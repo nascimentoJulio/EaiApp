@@ -11,7 +11,7 @@ namespace PanteraTech.EaiApp.WebApi.Controllers
 {
     [ApiController]
     [Route("/chats")]
-    public class Chats : ControllerBase
+    public class Chats : BaseController
     {
         private readonly IMediator _mediator;
         public Chats(IMediator mediator)
@@ -34,8 +34,7 @@ namespace PanteraTech.EaiApp.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetChats()
         {
-            var email =  User.Claims.FirstOrDefault(c => c.Type.EndsWith("emailaddress"))?.Value;
-            GetChatsCommand command = new GetChatsCommand{ EmailUser = email};
+            GetChatsCommand command = new GetChatsCommand{ EmailUser = Email};
             var result = await _mediator.Send(command);
 
             return Ok(result);

@@ -45,4 +45,6 @@ C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.WebApi\bin\Debug\ne
 C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.WebApi\bin\Debug\net5.0\PanteraTech.EaiApp.Domain.dll
 C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.WebApi\bin\Debug\net5.0\PanteraTech.EaiApp.Domain.pdb
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.WebApi\bin\Debug\net5.0\FluentValidation.dll
 C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.WebApi\obj\Debug\net5.0\PanteraTech.EaiApp.WebApi.csproj.CopyComplete
