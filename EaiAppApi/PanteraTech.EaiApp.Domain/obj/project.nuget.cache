@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HZpGhqU73YOX8m0Q6I0rwUMI1sJ95mGu8aeNTSlOVeBJ4Sli8CIRj81tAGBRFG1v1KGh61FVQSEweBVH5b089w==",
+  "dgSpecHash": "D0z/YZ7Eaiu50iEKKUtrpdqWhy05kcaCmTol8DDc5041nRRvabLjD8iGGMhf7zUuqtCMgeAQ47cbTGkaGLUCog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\PanteraTech.EaiApp.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Julio\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
@@ -39,6 +40,7 @@
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\Julio\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\Julio\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
