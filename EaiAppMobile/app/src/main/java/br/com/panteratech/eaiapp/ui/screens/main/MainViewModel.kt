@@ -1,6 +1,8 @@
 package br.com.panteratech.eaiapp.ui.screens.main
 
 import android.content.Context
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -30,10 +32,11 @@ class MainViewModel @Inject constructor(
 
             override fun onSuccess(t: List<ChatModel>){
                 mChats.value = t
+                t.forEach { Log.i("OnSucces view model", "${t.size}") }
             }
 
-            override fun onError(t: String) {
-                TODO("Not yet implemented")
+            override fun onError(message: String) {
+                Toast.makeText(context,message, Toast.LENGTH_SHORT).show()
             }
         }
 
