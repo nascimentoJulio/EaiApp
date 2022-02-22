@@ -14,7 +14,7 @@ import retrofit2.Response
 import javax.inject.Inject
 
 
-class UserRepository @Inject constructor(
+class RegisterUserRepository @Inject constructor(
     private var eaiApi: EaiApi,
     @ApplicationContext private var context: Context
 ) {
@@ -34,25 +34,4 @@ class UserRepository @Inject constructor(
         })
     }
 
-    fun login(loginModel: LoginModel, listener: ApiListener<LoginResponse>) : Boolean {
-        val call = eaiApi.login(loginModel)
-        var success = false
-        call.enqueue(object : Callback<LoginResponse> {
-            override fun onResponse(
-                call: Call<LoginResponse>,
-                response: Response<LoginResponse>
-            ) {
-                if (response.code() == 200){
-                    response.body()?.let { listener.onSuccess(it) }
-                    success = true
-                }
-            }
-
-            override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                listener.onError(context.getString(R.string.error_api))
-            }
-        })
-
-        return success
-    }
 }
