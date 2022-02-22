@@ -20,7 +20,7 @@ namespace PanteraTech.EaiApp.Infrastructure.Auth.Service
         {
           new Claim(ClaimTypes.Name, username),
           new Claim(ClaimTypes.Email, email),
-          new Claim(ClaimTypes.Role, roles)
+          new Claim("ExpireDate", DateTime.UtcNow.AddHours(2).ToString()),
         }),
         Expires = DateTime.UtcNow.AddHours(2),
         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

@@ -14,4 +14,3 @@ C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infraestructure.Dat
 C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infraestructure.Data\bin\Debug\net5.0\PanteraTech.EaiApp.Domain.pdb
 C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infraestructure.Data\bin\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.dll
 C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infraestructure.Data\bin\Debug\net5.0\PanteraTech.EaiApp.Infrastructure.Auth.pdb
-C:\Users\Julio\Documents\EaiApp\EaiAppApi\PanteraTech.EaiApp.Infraestructure.Data\obj\Debug\net5.0\PanteraTech.EaiApp.Infraestructure.Data.csproj.CopyComplete
