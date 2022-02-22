@@ -1,5 +1,6 @@
 package br.com.panteratech.eaiapp.ui.utils
 
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -9,6 +10,7 @@ import br.com.panteratech.eaiapp.ui.screens.main.MainScreen
 import br.com.panteratech.eaiapp.ui.screens.register.RegisterScreen
 
 
+@ExperimentalMaterialApi
 @Composable
 fun NavConfig() {
 

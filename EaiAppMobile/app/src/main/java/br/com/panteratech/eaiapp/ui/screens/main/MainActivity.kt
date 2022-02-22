@@ -3,21 +3,21 @@ package br.com.panteratech.eaiapp.ui.screens.main
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.LiveData
-import br.com.panteratech.eaiapp.model.ChatModel
+import br.com.panteratech.eaiapp.ui.components.activity.main.FriendItem
+import br.com.panteratech.eaiapp.ui.components.shared.container.Container
 import br.com.panteratech.eaiapp.ui.theme.EaiAppTheme
-import coil.compose.rememberImagePainter
 
 class MainActivity() : ComponentActivity() {
+    @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,25 +32,25 @@ class MainActivity() : ComponentActivity() {
     }
 }
 
+@ExperimentalMaterialApi
 @Composable
 fun MainScreen() {
+
     val viewModel = hiltViewModel<MainViewModel>()
     viewModel.getChats()
 
     val chatLiveData = viewModel.chats
 
     val chats by chatLiveData.observeAsState()
-    val s = chats
-    chats?.forEach { it -> Column() {
-        Text(text = it.usernameFriend)
-        Image(
-            painter = rememberImagePainter(data = it.friendProfileUrl,
-                builder = {
-                    crossfade(true)
-                }),
-            contentDescription = null,
-        )
-    } }
 
+    Container {
+        LazyColumn() {
+            chats?.let {
+                itemsIndexed(it) { _, chat ->
+                    FriendItem(chatModel = chat)
+                }
+            }
+        }
+    }
 }
 

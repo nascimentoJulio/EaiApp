@@ -3,7 +3,8 @@ package br.com.panteratech.eaiapp.modules
 import android.content.Context
 import br.com.panteratech.eaiapp.repository.remote.api.ChatRepository
 import br.com.panteratech.eaiapp.repository.remote.api.EaiApi
-import br.com.panteratech.eaiapp.repository.remote.api.UserRepository
+import br.com.panteratech.eaiapp.repository.remote.api.LoginRepository
+import br.com.panteratech.eaiapp.repository.remote.api.RegisterUserRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +20,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun createClient() : EaiApi {
+    fun createClient(): EaiApi {
         return Retrofit.Builder()
             .baseUrl("https://eai-app-back.herokuapp.com")
             .addConverterFactory(GsonConverterFactory.create())
@@ -29,23 +30,28 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun createRepositoryUser(
-         eaiApi: EaiApi,
-         @ApplicationContext context: Context
-    ) : UserRepository{
-        return UserRepository(eaiApi, context)
+    fun createRepositoryChat(
+        eaiApi: EaiApi,
+    ): ChatRepository {
+        return ChatRepository(eaiApi)
     }
 
     @Singleton
     @Provides
-    fun createRepositoryChat(
+    fun createRepositoryRegisterUser(
         eaiApi: EaiApi,
         @ApplicationContext context: Context
-    ) : ChatRepository{
-        return ChatRepository(eaiApi, context)
+    ): RegisterUserRepository {
+        return RegisterUserRepository(eaiApi, context)
     }
 
-
+    @Singleton
+    @Provides
+    fun createRepositoryLoginUser(
+        eaiApi: EaiApi,
+    ): LoginRepository {
+        return LoginRepository(eaiApi)
+    }
 
 
 }

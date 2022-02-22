@@ -4,13 +4,13 @@ import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel
 import br.com.panteratech.eaiapp.model.RegisterModel
 import br.com.panteratech.eaiapp.repository.remote.api.ImagesBucket
-import br.com.panteratech.eaiapp.repository.remote.api.UserRepository
+import br.com.panteratech.eaiapp.repository.remote.api.RegisterUserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
-    var api: UserRepository
+    var api: RegisterUserRepository
 ) : ViewModel() {
 
     fun register(model: RegisterModel, image: Bitmap) {
