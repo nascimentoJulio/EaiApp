@@ -1,4 +1,5 @@
 package br.com.panteratech.eaiapp.model
 
-class BaseModel {
+open class BaseModel(){
+
 }

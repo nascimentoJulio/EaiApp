@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import br.com.panteratech.eaiapp.listeners.ApiListener
 import br.com.panteratech.eaiapp.model.LoginModel
 import br.com.panteratech.eaiapp.repository.local.shared.SharedCache
-import br.com.panteratech.eaiapp.repository.remote.api.UserRepository
+import br.com.panteratech.eaiapp.repository.remote.api.LoginRepository
 import br.com.panteratech.eaiapp.response.LoginResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    var api: UserRepository,
+    var api: LoginRepository,
     @ApplicationContext private var context: Context
 ) : ViewModel() {
 
@@ -38,6 +38,7 @@ class LoginViewModel @Inject constructor(
             }
 
         }
-        return api.login(loginModel, apiListener)
+        api.login(apiListener, loginModel)
+        return true
     }
 }
