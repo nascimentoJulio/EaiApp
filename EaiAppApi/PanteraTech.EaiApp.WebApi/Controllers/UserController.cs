@@ -1,5 +1,7 @@
+using System;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PanteraTech.EaiApp.Domain.User.Login;
 using PanteraTech.EaiApp.Domain.User.Register;
@@ -10,7 +12,7 @@ namespace PanteraTech.EaiApp.WebApi.Controllers
 {
     [ApiController]
     [Route("/user")]
-    public class UserController : ControllerBase
+    public class UserController : BaseController
     {
         private readonly IMediator _mediator;
         public UserController(IMediator mediator)
@@ -29,6 +31,13 @@ namespace PanteraTech.EaiApp.WebApi.Controllers
         {
             var token = await _mediator.Send(command);
             return Ok(token);
+        }
+
+        [HttpGet("/validate-token")]
+        [Authorize]
+        public IActionResult ValidateToken()
+        {
+            return Ok(new {IsValid = ExpireDateToken.Date.CompareTo(DateTime.Now) >= 0});
         }
     }
 }
