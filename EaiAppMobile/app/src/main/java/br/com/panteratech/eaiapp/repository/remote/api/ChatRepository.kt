@@ -11,11 +11,8 @@ class ChatRepository @Inject constructor(
 ) : BaseRepository<ChatModel>() {
 
     fun getChats(listener: ApiListener<ChatModel>, token: String) {
-
         val call = eaiApi.getChats(token)
-
         callApiList(listener, call)
-
     }
 }
 
