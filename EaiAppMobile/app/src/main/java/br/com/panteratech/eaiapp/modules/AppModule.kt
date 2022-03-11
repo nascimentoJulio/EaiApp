@@ -1,10 +1,7 @@
 package br.com.panteratech.eaiapp.modules
 
 import android.content.Context
-import br.com.panteratech.eaiapp.repository.remote.api.ChatRepository
-import br.com.panteratech.eaiapp.repository.remote.api.EaiApi
-import br.com.panteratech.eaiapp.repository.remote.api.LoginRepository
-import br.com.panteratech.eaiapp.repository.remote.api.RegisterUserRepository
+import br.com.panteratech.eaiapp.repository.remote.api.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -51,6 +48,14 @@ object AppModule {
         eaiApi: EaiApi,
     ): LoginRepository {
         return LoginRepository(eaiApi)
+    }
+
+    @Singleton
+    @Provides
+    fun createRepositoryValidateToken(
+        eaiApi: EaiApi,
+    ): ValidateTokenRepository {
+        return ValidateTokenRepository(eaiApi)
     }
 
 

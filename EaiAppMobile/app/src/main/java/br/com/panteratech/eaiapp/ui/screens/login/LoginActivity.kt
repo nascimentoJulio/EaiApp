@@ -1,25 +1,17 @@
 package br.com.panteratech.eaiapp.ui.screens.login
 
-import android.graphics.Bitmap
-import android.graphics.ImageDecoder
-import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.provider.MediaStore
+import android.util.Log
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
@@ -44,6 +36,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class LoginActivity : ComponentActivity() {
 
 
+    @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -60,16 +53,21 @@ class LoginActivity : ComponentActivity() {
 
 @Composable
 fun LoginContainer(navController: NavHostController) {
-    Container {
-        Column {
-            Greeting(stringResource(id = R.string.login_greeting))
-            FormContainer(navController)
+    val viewModel = hiltViewModel<LoginViewModel>()
+
+        Container {
+            Column {
+                Greeting(stringResource(id = R.string.login_greeting))
+                FormContainer(navController)
+            }
         }
-    }
+
 }
 
 @Composable
 private fun FormContainer(navController: NavHostController) {
+    val viewModel = hiltViewModel<LoginViewModel>()
+
     var isShowPassword by remember { mutableStateOf(false) }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -134,14 +132,13 @@ private fun FormContainer(navController: NavHostController) {
         }
         Spacer(modifier = Modifier.padding(top = 150.dp))
 
-        val viewModel = hiltViewModel<LoginViewModel>()
-
-
         ButtonDefault(text = stringResource(id = R.string.login), onClick = {
-            val success = viewModel.login(
-                LoginModel(email, password)
-            )
-            navController.navigate("home")
+            viewModel.login(LoginModel(email, password))
+
+            val successLogin = viewModel.isSuccessLogin
+            if (successLogin.value == true) {
+                navController.navigate("chats")
+            }
         })
     }
 }
