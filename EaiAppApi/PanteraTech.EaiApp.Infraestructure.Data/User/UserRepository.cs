@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Dapper;
 using Npgsql;
 using PanteraTech.EaiApp.Domain.Repository;
+using PanteraTech.EaiApp.Domain.User.GetUsers;
 using PanteraTech.EaiApp.Domain.User.Register;
 using PanteraTech.EaiApp.Infraestructure.Data.Config;
 
@@ -64,6 +65,27 @@ namespace PanteraTech.EaiApp.Infraestructure.Data.User
           };
         }
         return null;
+      }
+    }
+
+    public async Task<GetUsersCommandResult> GetUsers(string loggedUser)
+    {
+      using (var db = new NpgsqlConnection("Server=ec2-34-232-149-136.compute-1.amazonaws.com;Port=5432;Database=d8gn66uir43dod;User Id=idgwbyrgklmalo;Password=1084bab71f92c9fae6709d8ad0eb2c7d32f287fa849e2b16392a39e8a7e8f2c8;Ssl Mode=Require;Trust Server Certificate=true;"))
+      {
+        var query = @"Select * from userapp Where email != @Email";
+        var user = await db.QueryAsync<User>(query, new {Email = loggedUser});
+        db.Close();
+      
+        var users = user.Select(u => new UserData 
+        {
+            UserName = u.Username,
+            UrlProfilePhoto = u.Url_Profile_User,
+            Email = u.Email
+        });
+        return new GetUsersCommandResult
+        {
+         Users = users.ToList()
+        };
       }
     }
   }

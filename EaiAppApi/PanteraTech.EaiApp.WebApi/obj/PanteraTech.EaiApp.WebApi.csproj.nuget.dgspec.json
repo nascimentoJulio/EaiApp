@@ -14,12 +14,14 @@
         "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
@@ -59,6 +61,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "PagedList": {
+              "target": "Package",
+              "version": "[1.17.0, )"
             }
           },
           "imports": [
@@ -76,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -90,12 +96,14 @@
         "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
@@ -144,7 +152,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -158,12 +166,14 @@
         "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
@@ -208,7 +218,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -222,12 +232,14 @@
         "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
           "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
@@ -301,7 +313,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

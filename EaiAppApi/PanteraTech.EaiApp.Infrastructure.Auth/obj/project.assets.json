@@ -1543,19 +1543,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj",
+      "projectUniqueName": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj",
       "projectName": "PanteraTech.EaiApp.Infrastructure.Auth",
-      "projectPath": "c:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj",
+      "projectPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\PanteraTech.EaiApp.Infrastructure.Auth.csproj",
       "packagesPath": "C:\\Users\\Julio\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\obj\\",
+      "outputPath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infrastructure.Auth\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Julio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/packages/nuget/v3/index.json": {},
         "https://pkgs.dev.azure.com/credz-devops/Arquitetura/_packaging/symbols/nuget/v3/index.json": {}
@@ -1600,7 +1602,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

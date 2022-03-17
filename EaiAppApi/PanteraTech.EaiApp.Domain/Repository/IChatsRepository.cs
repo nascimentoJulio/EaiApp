@@ -10,5 +10,7 @@ namespace PanteraTech.EaiApp.Domain.Repository
          Task<long> CreateChat(CreateChatsCommand values);
 
          Task<List<GetChatsCommandResult>> GetChats(string userEmail);
+
+        Task<bool> ExistsChatWithUsers(string userEmail, string userFriend);
     }
 }
