@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ytNeXALmWzj5jRRl4NaHml6uZWQ7T0MlhWMWUuMVdz/rN1xiDvHgYQ+zMm6LB/0HgCcm9p/6/IYCx/3K+j+zpg==",
+  "dgSpecHash": "rB5kdu8TrhskiMrtiQHH2Ic5lGbqbdjdCVbgXLPNez/9gt8NlSN3qIGGRX5MtN8vyt0gAKXHDMjPlp3qB6Yx2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Julio\\Documents\\EaiApp\\EaiAppApi\\PanteraTech.EaiApp.Infraestructure.Data\\PanteraTech.EaiApp.Infraestructure.Data.csproj",
   "expectedPackageFiles": [
@@ -62,10 +62,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'PagedList 1.17.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net5.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "message": "O pacote 'PagedList 1.17.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "PagedList",
       "targetGraphs": [
-        "net5.0"
+        "net6.0"
       ]
     }
   ]

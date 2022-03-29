@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "60F59qIvAinJ/EQ/YkK3e30zm7kbFgyKveOQl1UoS5Y=",
+  "Source": "PanteraTech.EaiApp.WebApi",
+  "BasePath": "_content/PanteraTech.EaiApp.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

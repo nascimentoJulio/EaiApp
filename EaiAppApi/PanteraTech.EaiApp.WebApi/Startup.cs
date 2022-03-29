@@ -19,6 +19,7 @@ using PanteraTech.EaiApp.Infraestructure.Data.Config;
 using PanteraTech.EaiApp.Infraestructure.Data.Chats;
 using PanteraTech.EaiApp.WebApi.Extensions;
 using PanteraTech.EaiApp.Infraestructure.Data.Friendship;
+using System;
 
 namespace PanteraTech.EaiApp.WebApi
 {
@@ -87,9 +88,11 @@ namespace PanteraTech.EaiApp.WebApi
 
       app.UseCors();
       app.UseHttpsRedirection();
+     
 
+      app.UseWebSockets();
+      app.UseWebSockets();
       app.UseRouting();
-
 
       app.UseAuthentication();
 
