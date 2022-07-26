@@ -1,55 +1,46 @@
 using System;
+using System.Linq;
 using System.Net;
 using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PanteraTech.EaiApp.Domain.Messages.GetMessageByChat;
+using PanteraTech.EaiApp.Domain.Messages.SendMessage;
+using Serilog;
 
 namespace PanteraTech.EaiApp.WebApi.Controllers
 {
-  [ApiController]
-  [Route("messages")]
-  public class MessagesController : BaseController
-  {
-
-    [HttpGet("teste")]
-    public async Task Test()
+    [ApiController]
+    [Route("messages")]
+    public class MessagesController : BaseController
     {
-      if (HttpContext.WebSockets.IsWebSocketRequest)
-      {
-        using var webSocket = await HttpContext.WebSockets.AcceptWebSocketAsync();
-        await Echo(webSocket);
-      }
-      else
-      {
-        HttpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
-      }
+
+        private readonly IMediator _mediator;
+
+        public MessagesController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        [HttpGet("{idChat}")]
+        [Authorize]
+        public async Task<IActionResult> GetMessageByChat(int idChat, [FromQuery] int page = 1, [FromQuery] int pageSize = 50)
+        {
+            var command = new GetMessagesByChatCommand
+            {
+                Page = page,
+                PageSize = pageSize,
+                IdChat = idChat,
+                EmailUser = Email,
+            };
+            var response = await _mediator.Send(command);
+
+            return Ok(response);
+        }
     }
-
-    private static async Task Echo(WebSocket webSocket)
-{
-    var buffer = new byte[1024 * 4];
-    var receiveResult = await webSocket.ReceiveAsync(
-        new ArraySegment<byte>(buffer), CancellationToken.None);
-
-    while (!receiveResult.CloseStatus.HasValue)
-    {
-        await webSocket.SendAsync(
-            new ArraySegment<byte>(buffer, 0, receiveResult.Count),
-            receiveResult.MessageType,
-            receiveResult.EndOfMessage,
-            CancellationToken.None);
-
-        receiveResult = await webSocket.ReceiveAsync(
-            new ArraySegment<byte>(buffer), CancellationToken.None);
-    }
-
-    await webSocket.CloseAsync(
-        receiveResult.CloseStatus.Value,
-        receiveResult.CloseStatusDescription,
-        CancellationToken.None);
-}
-  }
 }

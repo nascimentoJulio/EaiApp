@@ -504,6 +504,15 @@
           "lib/net40/PagedList.dll": {}
         }
       },
+      "Serilog/2.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Serilog.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Serilog.dll": {}
+        }
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -670,7 +679,8 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "10.0.1",
           "Newtonsoft.Json": "13.0.1",
           "PagedList": "1.17.0",
-          "PanteraTech.EaiApp.Infrastructure.Auth": "1.0.0"
+          "PanteraTech.EaiApp.Infrastructure.Auth": "1.0.0",
+          "Serilog": "2.11.0"
         },
         "compile": {
           "bin/placeholder/PanteraTech.EaiApp.Domain.dll": {}
@@ -1372,6 +1382,32 @@
         "lib/net40/PagedList.xml",
         "pagedlist.1.17.0.nupkg.sha512",
         "pagedlist.nuspec"
+      ]
+    },
+    "Serilog/2.11.0": {
+      "sha512": "ysv+hBzTul6Dp+Hvm10FlhJO3yMQcFKSAleus+LpiIzvNstpeV4Z7gGuIZ1OPNfIMulSHOjmLuGAEDKzpnV8ZQ==",
+      "type": "package",
+      "path": "serilog/2.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net45/Serilog.dll",
+        "lib/net45/Serilog.xml",
+        "lib/net46/Serilog.dll",
+        "lib/net46/Serilog.xml",
+        "lib/net5.0/Serilog.dll",
+        "lib/net5.0/Serilog.xml",
+        "lib/netstandard1.0/Serilog.dll",
+        "lib/netstandard1.0/Serilog.xml",
+        "lib/netstandard1.3/Serilog.dll",
+        "lib/netstandard1.3/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "lib/netstandard2.1/Serilog.dll",
+        "lib/netstandard2.1/Serilog.xml",
+        "serilog.2.11.0.nupkg.sha512",
+        "serilog.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {
