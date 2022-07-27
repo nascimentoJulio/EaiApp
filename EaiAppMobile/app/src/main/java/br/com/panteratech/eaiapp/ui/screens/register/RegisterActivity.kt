@@ -198,9 +198,7 @@ fun requestContentPermission() : Bitmap? {
                 Image(
                     bitmap = bitmap.value!!.asImageBitmap(),
                     contentDescription = null,
-                    modifier = Modifier
-                        .height(150.dp)
-                        .width(150.dp)
+                    modifier = Modifier.requiredSize(150.dp,150.dp)
                 )
             } else {
                 DefaultText(text = stringResource(id = R.string.take_picture))

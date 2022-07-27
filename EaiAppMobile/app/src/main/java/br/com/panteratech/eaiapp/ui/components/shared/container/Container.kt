@@ -13,7 +13,6 @@ fun Container(content: @Composable () -> Unit) {
     Box(
         Modifier
             .fillMaxWidth()
-            .fillMaxHeight()
             .padding(horizontal = 30.dp, vertical = 50.dp),
     ) {
         content()

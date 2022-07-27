@@ -16,6 +16,15 @@ namespace PanteraTech.EaiApp.Domain.Constanst
 
     public static string SAME_USER = "SameUser";
 
-    public static string SAME_USER_MESSAGE = "Os usuarios deve ser diferentes";   
-  }
+    public static string SAME_USER_MESSAGE = "Os usuarios deve ser diferentes";
+    
+    public static string LIMIT_EXCEEDED = "LimitExceeded";
+
+    public static string LIMIT_EXCEEDED_MESSAGE = "O limite foi excedido. Limite maximo: {0}";
+
+    public static string INTERNAL_ERROR = "InternalError";
+
+    public const string INTERNAL_ERROR_MESSAGE = "Erro interno, tente novamente";
+
+    }
 }

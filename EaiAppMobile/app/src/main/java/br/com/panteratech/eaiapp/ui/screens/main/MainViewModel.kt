@@ -32,7 +32,6 @@ class MainViewModel @Inject constructor(
 
             override fun onSuccess(t: List<ChatModel>){
                 mChats.value = t
-                t.forEach { Log.i("OnSucces view model", "${t.size}") }
             }
 
             override fun onError(message: String) {

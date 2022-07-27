@@ -23,6 +23,18 @@ namespace PanteraTech.EaiApp.Infraestructure.Data.Chats
       }
     }
 
+    public async Task<bool> ExistsChatWithUsers(string userEmail, string userFriend)
+    {
+      using (var db = new NpgsqlConnection("Server=ec2-34-232-149-136.compute-1.amazonaws.com;Port=5432;Database=d8gn66uir43dod;User Id=idgwbyrgklmalo;Password=1084bab71f92c9fae6709d8ad0eb2c7d32f287fa849e2b16392a39e8a7e8f2c8;Ssl Mode=Require;Trust Server Certificate=true;"))
+      {
+        var query = @"select * from chats where email_user = @UserEmail and email_friend = @EmailFriend";
+        var chats = await db.QueryAsync<Chats>(query, new { UserEmail = userEmail, EmailFriend = userFriend });
+        db.Close();
+
+        return chats.Count() > 0;
+      }
+    }
+
     public async Task<List<GetChatsCommandResult>> GetChats(string userEmail)
     {
       using (var db = new NpgsqlConnection("Server=ec2-34-232-149-136.compute-1.amazonaws.com;Port=5432;Database=d8gn66uir43dod;User Id=idgwbyrgklmalo;Password=1084bab71f92c9fae6709d8ad0eb2c7d32f287fa849e2b16392a39e8a7e8f2c8;Ssl Mode=Require;Trust Server Certificate=true;"))

@@ -3,6 +3,7 @@ package br.com.panteratech.eaiapp.repository.remote.api
 import br.com.panteratech.eaiapp.model.ChatModel
 import br.com.panteratech.eaiapp.model.LoginModel
 import br.com.panteratech.eaiapp.model.RegisterModel
+import br.com.panteratech.eaiapp.model.ValidateTokenModel
 import br.com.panteratech.eaiapp.response.LoginResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -23,4 +24,9 @@ interface EaiApi {
     fun getChats(
         @Header( "Authorization") authorization : String
     ) : Call<List<ChatModel>>
+
+    @GET("/validate-token")
+    fun validateToken(
+        @Header( "Authorization") authorization : String
+    ) : Call<ValidateTokenModel>
 }
