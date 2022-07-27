@@ -68,14 +68,7 @@ namespace PanteraTech.EaiApp.WebApi
 
         };
       });
-      services.AddCors(option => option.AddPolicy(name: "MyConf",
-                          policy =>
-                          {
-                              policy.WithOrigins("https://localhost:44390/")
-                                                  .AllowAnyHeader()
-                                                  .AllowAnyMethod()
-                                                  .AllowAnyOrigin();
-                          }));
+      services.AddCors();
       services.AddScoped<ITokenService, TokenService>();
       services.AddScoped<IUserRepository, UserRepository>();
       services.AddScoped<IChatsRepository, ChatsRepository>();
@@ -85,16 +78,15 @@ namespace PanteraTech.EaiApp.WebApi
       {
         options.EnableDetailedErrors = true;
       });
-            services.AddCors(options => options.AddPolicy("CorsPolicy",
-      builder =>
+      services.AddCors(options => options.AddPolicy("CorsPolicy", builder =>
       {
-       builder.AllowAnyHeader()
-              .AllowAnyMethod()
-              .SetIsOriginAllowed((host) => true)
-              .AllowCredentials();
-        }));
-            //   services.AddSingleton(postgreSqlConfiguration);
-        }
+        builder.AllowAnyHeader()
+               .AllowAnyMethod()
+               .SetIsOriginAllowed((host) => true)
+               .AllowCredentials();
+      }));
+      //   services.AddSingleton(postgreSqlConfiguration);
+    }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -108,21 +100,20 @@ namespace PanteraTech.EaiApp.WebApi
 
       app.UseMyErrorHandler();
 
-      app.UseCors(builder =>
-      {
-        builder.WithOrigins("CorsPolicy")
-            .AllowAnyHeader()
-            .WithMethods("GET", "POST")
-            .AllowCredentials();
-      });
+      app.UseCors();
 
       app.UseWebSockets();
       app.UseAuthentication();
-      app.UseAuthorization();
       app.UseRouting();
-      app.UseEndpoints(endpoint => endpoint.MapHub<ChatHub>("/send-messages"));
-     
-   
+      app.UseAuthorization();
+      app.UseEndpoints(endpoint =>
+      {
+        endpoint.MapControllers();
+        endpoint.MapHub<ChatHub>("/send-messages");
+      }
+      );
+
+
     }
   }
 }
